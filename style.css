@@ -204,28 +204,53 @@ button:hover {
 }
 
 .totalDiv {
-    padding: 7px 80px;
-    background-color: rgb(183, 183, 183); 
+    padding: 10px 20px;
+    background-color: rgb(183, 183, 183);
     color: #333;
-    border: 1px solid #dcdcdc;  
-    border-radius: 8px;  
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
     text-align: center;
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 600;
- }
+    width: 100%; /* Ensures the totalDiv takes up the full width of its container */
+    margin: 10px 0; /* Adds space between the total and the checkout button */
+}
+
 .cart-actions {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-between;
     margin: 20px 10px 0;
     padding: 10px;
+    flex-wrap: wrap; /* Ensures that it wraps correctly on smaller screens */
+}
+
+.right-container {
+    width: 48%; /* Control the size of the right container */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cart-actions .totalDiv {
+    width: 100%; /* Ensures totalDiv takes full width of the right container */
+    margin-bottom: 10px; /* Adds space between total and the checkout button */
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: space-between; /* Ensures the content is spread out */
+    margin: 20px 10px 0;
+    padding: 10px;
+    flex-wrap: wrap; /* Allows wrapping of elements on smaller screens */
 }
 
 .button1 {
-    padding: 8px 12px;
-    font-size: 14px;
-    width: 100%;
+    width: 100%; /* Ensures the buttons take full width on smaller screens */
+    padding: 12px;
+    font-size: 16px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .continue-shopping {
@@ -248,4 +273,88 @@ button:hover {
 .checkout-button:hover {
     background-color: rgb(79, 190, 255); 
     color: white;
+}
+.left-container,
+.right-container {
+    margin: 0;
+}
+
+.buttoon:hover{
+    background-color: rgb(183, 183, 183); 
+}
+
+.buttoon:active{
+background-color: rgb(183, 183, 183);
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .cart-actions {
+        flex-direction: column; /* Stack the containers vertically on smaller screens */
+        align-items: center; /* Center align content */
+    }
+
+    .left-container,
+    .right-container {
+        width: 90%; /* Take 90% of the width on small screens */
+        margin-bottom: 15px; /* Increased space between elements */
+    }
+
+    .totalDiv {
+        width: 100%; /* Make the totalDiv take the full width */
+        margin-bottom: 10px;
+    }
+
+    .left-container button,
+    .right-container button {
+        padding: 12px 15px; /* Adjust padding for better touch targets */
+        font-size: 16px; /* Increase font size for better readability */
+    }
+    .button1 {
+        width: 100%; /* Ensure buttons are full width on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column; /* Stack the image and content vertically on small screens */
+        align-items: center; /* Center the content */
+        text-align: center; /* Center the text for better readability */
+    }
+
+    .cart-item img.product-image {
+        width: 120px; /* Smaller image size on small screens */
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between the image and the content */
+    }
+
+    .cart-item-info {
+        padding-left: 0;
+    }
+
+    .cart-item-controls {
+        flex-direction: column; /* Stack the quantity buttons vertically */
+        margin-top: 10px;
+    }
+
+    .remove-button {
+        width: 100%; /* Make the remove button take full width on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-actions {
+        flex-direction: column; /* Stack the content vertically on smaller screens */
+        align-items: center; /* Center align the content */
+    }
+
+    .right-container {
+        width: 90%; /* Ensure the right section takes up more width on small screens */
+    }
+
+    .totalDiv {
+        width: 100%; /* Ensure total takes full width */
+        margin-bottom: 15px; /* Add margin to separate it from other content */
+    }
 }
