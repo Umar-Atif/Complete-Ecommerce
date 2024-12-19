@@ -82,6 +82,7 @@ button {
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 button:hover {
@@ -129,4 +130,122 @@ button:hover {
 }
 .a:hover{
     text-decoration: none;
+}
+
+.cart-container {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.product-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.remove-button {
+    padding: 10px 20px;
+    background-color: #d33;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #c1351d;
+}
+
+.cart-actions {
+    display: flex;
+    /* justify-content; */
+    margin-top: 30px;
+    align-items: center;
+}
+
+.plus-minus-btn {
+    background-color: #f0f0f0;
+    color: #333; 
+    border: 1px solid #e8e7e7; 
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px;
+}
+
+.plus-minus-btn:hover {
+    background-color: #e0e0e0; 
+}
+
+.plus-minus-btn:active {
+    background-color: #d0d0d0;
+}
+
+.totalDiv {
+    padding: 7px 80px;
+    background-color: rgb(183, 183, 183); 
+    color: #333;
+    border: 1px solid #dcdcdc;  
+    border-radius: 8px;  
+    text-align: center;
+    font-size: 18px; 
+    font-weight: 600;
+ }
+.cart-actions {
+    display: flex;
+    justify-content: space-around; 
+    margin: 20px 10px 0;
+    padding: 10px;
+}
+
+.button1 {
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.continue-shopping {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.clear-cart {
+    background-color: red; 
+    color: white;
+}
+.clear-cart:hover{
+    background-color: rgb(255, 73, 73);
+}
+
+.checkout-button {
+    background-color: rgb(0, 162, 255); 
+    color: white;
+}
+.checkout-button:hover {
+    background-color: rgb(79, 190, 255); 
+    color: white;
 }

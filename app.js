@@ -1,5 +1,8 @@
 const output1 = document.querySelector(".products-container");
 
+const cart = JSON.parse(localStorage.getItem("cart"))
+const globalCart = cart || []
+
 fetch("https://dummyjson.com/products")
 .then((res) => res.json())
 .then((res) => {
@@ -11,9 +14,8 @@ fetch("https://dummyjson.com/products")
                 <p>${item.description.slice(0, 50)}...</p>
                 <p>Price: <span class="price">$${item.price}</span></p>
                 <button class="see-more-button" onclick="seeMore(${item.id})">See More</button>
-                <button class="add-to-cart" onclick="addToCart(${item.id , item.thumbnail, item.title, item.description, item.price} })">Add to Cart</button>
-            </div>
-        `;
+                <button class="add-to-cart" onclick="addToCart(${(item.id)})">Add To Cart</button>
+            </div>`;
     });
 })
 .catch((err) => {
@@ -25,5 +27,21 @@ function seeMore(id) {
     window.location = "./seemore.html";
 }
 
-function addToCart(id, thumbnail, title, description, price) {
+function addToCart(id) {
+    console.log(id);
+    Swal.fire({title: "Item Added To Cart Successfully"});
+    fetch(`https://dummyjson.com/products/${id}`)
+    .then((res) => res.json())
+    .then((res) => {
+        console.log(res);
+        let productInCart = globalCart.find(item => item.id === res.id);
+        if (!productInCart) {
+            res.quantity = 1;
+            globalCart.push(res);
+            localStorage.setItem("cart", JSON.stringify(globalCart));
+        } else {
+            productInCart.quantity++;
+            localStorage.setItem("cart", JSON.stringify(globalCart));
+        }
+    });
 }
