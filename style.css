@@ -5,8 +5,15 @@ body {
     background-color: #f4f4f4;
 }
 
-nav {
+nav{
     background-color: #4caf50;
+    /* background-color: #0084ff;   */
+    /* background-color: #ff0000; */
+    /* background-color: #FDDA0D; */
+    /* background-color: #ff58d3; */
+    /* background-color: #333; */
+    /* background-color: #8800ff; */
+    /* background-color: #ff8800; */
     padding: 30px;
     display: flex;
     justify-content: space-between;
@@ -171,96 +178,47 @@ button:hover {
     margin-top: 15px;
     cursor: pointer;
 }
-
 .remove-button:hover {
     background-color: #c1351d;
-}
-
-.cart-actions {
-    display: flex;
-    /* justify-content; */
-    margin-top: 30px;
-    align-items: center;
 }
 
 .plus-minus-btn {
     background-color: #f0f0f0;
     color: #333; 
     border: 1px solid #e8e7e7; 
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin: 0 5px;
 }
-
 .plus-minus-btn:hover {
     background-color: #e0e0e0; 
 }
-
 .plus-minus-btn:active {
     background-color: #d0d0d0;
 }
 
-.totalDiv {
-    padding: 10px 20px;
-    background-color: rgb(183, 183, 183);
-    color: #333;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    width: 100%; /* Ensures the totalDiv takes up the full width of its container */
-    margin: 10px 0; /* Adds space between the total and the checkout button */
-}
-
-.cart-actions {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 10px 0;
-    padding: 10px;
-    flex-wrap: wrap; /* Ensures that it wraps correctly on smaller screens */
-}
-
-.right-container {
-    width: 48%; /* Control the size of the right container */
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.cart-actions .totalDiv {
-    width: 100%; /* Ensures totalDiv takes full width of the right container */
-    margin-bottom: 10px; /* Adds space between total and the checkout button */
-}
-
-.cart-actions {
-    display: flex;
-    justify-content: space-between; /* Ensures the content is spread out */
-    margin: 20px 10px 0;
-    padding: 10px;
-    flex-wrap: wrap; /* Allows wrapping of elements on smaller screens */
-}
-
-.button1 {
-    width: 100%; /* Ensures the buttons take full width on smaller screens */
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
 
 .continue-shopping {
     background-color: #4CAF50;
     color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    width: 35%;
 }
 
 .clear-cart {
     background-color: red; 
     color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    width: 35%;
 }
 .clear-cart:hover{
     background-color: rgb(255, 73, 73);
@@ -269,64 +227,75 @@ button:hover {
 .checkout-button {
     background-color: rgb(0, 162, 255); 
     color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    width: 60%;
 }
 .checkout-button:hover {
     background-color: rgb(79, 190, 255); 
     color: white;
 }
-.left-container,
-.right-container {
-    margin: 0;
-}
 
+.buttoon{
+    background-color: rgb(183, 183, 183);
+    color: #333;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: auto;
+    width: 80%;
+}
 .buttoon:hover{
-    background-color: rgb(183, 183, 183); 
+    background-color: #b7b7b7; 
+    cursor: auto;
+}
+.buttoon:active{
+    background-color: rgb(183, 183, 183);
+    cursor: auto;
 }
 
-.buttoon:active{
-background-color: rgb(183, 183, 183);
+.first-side{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e4e4;
+    padding: 10px 3px 15px;
+    border-radius: 30px;
 }
+
+.second-side{
+    display: flex;
+    margin: 30px 30px 15px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 
 /* Responsive Design */
 
 @media (max-width: 768px) {
     .cart-actions {
-        flex-direction: column; /* Stack the containers vertically on smaller screens */
-        align-items: center; /* Center align content */
-    }
-
-    .left-container,
-    .right-container {
-        width: 90%; /* Take 90% of the width on small screens */
-        margin-bottom: 15px; /* Increased space between elements */
-    }
-
-    .totalDiv {
-        width: 100%; /* Make the totalDiv take the full width */
-        margin-bottom: 10px;
-    }
-
-    .left-container button,
-    .right-container button {
-        padding: 12px 15px; /* Adjust padding for better touch targets */
-        font-size: 16px; /* Increase font size for better readability */
-    }
-    .button1 {
-        width: 100%; /* Ensure buttons are full width on smaller screens */
+        flex-direction: column; 
+        align-items: center; 
     }
 }
-
 @media (max-width: 768px) {
     .cart-item {
-        flex-direction: column; /* Stack the image and content vertically on small screens */
-        align-items: center; /* Center the content */
-        text-align: center; /* Center the text for better readability */
+        flex-direction: column;
+        align-items: center;
+        text-align: center
     }
 
     .cart-item img.product-image {
-        width: 120px; /* Smaller image size on small screens */
+        width: 120px;
         margin-right: 0;
-        margin-bottom: 10px; /* Space between the image and the content */
+        margin-bottom: 10px;
     }
 
     .cart-item-info {
@@ -334,27 +303,84 @@ background-color: rgb(183, 183, 183);
     }
 
     .cart-item-controls {
-        flex-direction: column; /* Stack the quantity buttons vertically */
+        flex-direction: column;
         margin-top: 10px;
     }
 
     .remove-button {
-        width: 100%; /* Make the remove button take full width on smaller screens */
+        width: 100%;
+    }
+    .second-side{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .continue-shopping, .clear-cart{
+        font-size: 13px;
+    }
+}
+@media (max-width: 768px) {
+    .cart-actions {
+        flex-direction: column;
+        align-items: center
     }
 }
 
+
+nav {
+    /* background-color: #4caf50; */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav h1 {
+    margin: 0;
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
-    .cart-actions {
-        flex-direction: column; /* Stack the content vertically on smaller screens */
-        align-items: center; /* Center align the content */
+    .products-container {
+        padding: 10px;
     }
 
-    .right-container {
-        width: 90%; /* Ensure the right section takes up more width on small screens */
+    .product-card {
+        padding: 15px;
+        margin: 10px 0;
     }
 
-    .totalDiv {
-        width: 100%; /* Ensure total takes full width */
-        margin-bottom: 15px; /* Add margin to separate it from other content */
+    .product-card h3 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
     }
 }
